@@ -1,5 +1,6 @@
 import './assets-css/App.css';
 import NavBar from "./components/NavBar";
+import Form from "./components/Form"
 
 function App() {
 
@@ -7,7 +8,8 @@ function App() {
   return (
     <div className="App">
 
-      <NavBar/>
+      <NavBar />
+      <Form />
 
     </div>
   );
