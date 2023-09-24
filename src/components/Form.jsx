@@ -3,10 +3,10 @@ import React, {useState} from 'react';
 const Form = () => {
     const [city, setCity] = useState("");
 
-
     const onSubmit = (e) => {
         e.preventDefault();//Con preventDefault se evita que se recarge la pagina
         console.log({city})
+        if(city === "" || !city) return;
     }
 
     return(
