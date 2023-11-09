@@ -1,6 +1,6 @@
 import './assets-css/App.css';
 import NavBar from "./components/NavBar";
-import Form from "./components/Form"
+
 
 function App() {
 
@@ -9,7 +9,6 @@ function App() {
     <div className="App">
 
       <NavBar />
-      <Form />
 
     </div>
   );
