@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-const Form = () => {
+const Form = ({newLocation}) => {
     const [city, setCity] = useState("");
 
     const onSubmit = (e) => {
