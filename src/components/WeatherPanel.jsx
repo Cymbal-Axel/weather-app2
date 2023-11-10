@@ -57,3 +57,5 @@ const WeatherPanel = () => {
             </React.Fragment>
         )
 }
+
+export default WeatherPanel;
