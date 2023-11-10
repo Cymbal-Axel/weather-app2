@@ -1,6 +1,6 @@
 import './assets-css/App.css';
 import NavBar from "./components/NavBar";
-
+import WeatherPanel from "./components/WeatherPanel";
 
 function App() {
 
@@ -9,7 +9,7 @@ function App() {
     <div className="App">
 
       <NavBar />
-
+      <WeatherPanel />
     </div>
   );
 }
