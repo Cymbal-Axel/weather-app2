@@ -7,6 +7,7 @@ const Form = ({newLocation}) => {
         e.preventDefault();//Con preventDefault se evita que se recarge la pagina
         console.log({city})
         if(city === "" || !city) return;
+        newLocation(city);
     }
 
     return(
