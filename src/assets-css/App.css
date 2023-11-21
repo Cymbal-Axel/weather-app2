@@ -2,10 +2,14 @@ body{
   background-color: #2F3544;
 }
 
-.App {
+.App{
   text-align: center;
 }
 
 .input-group{
   width: 60%;
+}
+
+.card{
+  max-width: 60%;
 }
