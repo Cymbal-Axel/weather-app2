@@ -3,6 +3,13 @@ import Spinner from './Spinner';
 
 const Card = ({showData, loadingData, weather, forecast}) => {
 
+    var today = new Date();
+    var day = today.getDate();
+    var month = today.getMonth();
+    var year = today.getYear();
+    var date = day+"/"+month+"/"+year; 
+
+
     if(loadingData){
         return <Spinner />;
     }
@@ -17,6 +24,7 @@ const Card = ({showData, loadingData, weather, forecast}) => {
                             <div className='row g-0'>
                                 <div className='col-md-4'>
                                     <h3 className="card-title">{weather.name}</h3>
+                                    <p className="card-date">{date}</p>
                                     <img src='https://images.pexels.com/photos/2422588/pexels-photo-2422588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' className='img-fluid rounded-start' alt='..'/>
                                 </div>
                                 <div className='col-md-8'>
