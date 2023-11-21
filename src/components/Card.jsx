@@ -16,6 +16,7 @@ const Card = ({showData, loadingData, weather, forecast}) => {
                         <div className='card mb-3 mx-auto bg-dark text-light'>
                             <div className='row g-0'>
                                 <div className='col-md-4'>
+                                    <h3 className="card-title">{weather.name}</h3>
                                     <img src='https://images.pexels.com/photos/2422588/pexels-photo-2422588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' className='img-fluid rounded-start' alt='..'/>
                                 </div>
                                 <div className='col-md-8'>
