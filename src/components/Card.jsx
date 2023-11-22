@@ -25,6 +25,7 @@ const Card = ({showData, loadingData, weather, forecast}) => {
                                 <div className='col-md-4'>
                                     <h3 className="card-title">{weather.name}</h3>
                                     <p className="card-date">{date}</p>
+                                    <h1 className="card-temp">{(weather.main.temp - 273.15).toFixed(1)}°C</h1>
                                     <img src='https://images.pexels.com/photos/2422588/pexels-photo-2422588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' className='img-fluid rounded-start' alt='..'/>
                                 </div>
                                 <div className='col-md-8'>
