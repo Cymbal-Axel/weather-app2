@@ -39,7 +39,14 @@ const Card = ({showData, loadingData, weather, forecast}) => {
                                     <img src='https://images.pexels.com/photos/18525949/pexels-photo-18525949/free-photo-of-vuelo-amanecer-naturaleza-cielo.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' className='img-fluid rounded-start' alt='..'/>
                                 </div>
                                 <div className='col-md-8'>
-                                    <div className='card-body text-start mt-2'></div>
+                                    <div className='card-body text-start mt-2'>
+                                        <h5 className='card-test'>Temperatura maxima: {(weather.main.temp_max - 273.15).toFixed(1)}°C</h5>
+                                        <h5 className='card-test'>Temperatura minima: {(weather.main.temp_min - 273.15).toFixed(1)}°C</h5>
+                                        <h5 className='card-test'>Sensacion termica: {(weather.main.feels_like - 273.15).toFixed(1)}°C</h5>
+                                        <h5 className='card-test'>Humedad: {weather.main.humidity}%</h5>
+                                        <h5 className='card-test'>Velocidad del viento: {weather.wind.speed}m/s</h5>
+
+                                    </div>
                                 </div>
 
                             </div>
