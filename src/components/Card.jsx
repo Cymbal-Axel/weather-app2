@@ -13,6 +13,14 @@ const Card = ({showData, loadingData, weather, forecast}) => {
     var url = "";
     var iconUrl = "";
 
+    var iconUrl3 = "";
+    var iconUrl6 = "";
+    var iconUrl9 = "";
+
+    var forecastDate3 = "";
+    var forecastDate6 = "";
+    var forecastDate9 = "";
+
 
     if(loadingData){
         return <Spinner />;
@@ -21,6 +29,15 @@ const Card = ({showData, loadingData, weather, forecast}) => {
     if(showData){
         url = "http://openweathermap.org/img/w/";
         iconUrl = url + weather.weather[0].icon + ".png";
+
+        iconUrl3 = url + forecast.list[1].weather[[0].icon + ".png"];
+        iconUrl6 = url + forecast.list[2].weather[[0].icon + ".png"];
+        iconUrl9 = url + forecast.list[3].weather[[0].icon + ".png"];
+
+        forecastDate3 = forecast.list[1].dt_txt.substring(8, 10) + '/' + forecast.list[1].dt_txt.substring(5, 7) + '/' + forecast.list[1].dt_txt.substring(0, 4) + " " + forecast.list[1].dt_txt.substring(11, 13)
+        forecastDate6 = forecast.list[2].dt_txt.substring(8, 10) + '/' + forecast.list[2].dt_txt.substring(5, 7) + '/' + forecast.list[2].dt_txt.substring(0, 4) + " " + forecast.list[2].dt_txt.substring(11, 13)
+        forecastDate9 = forecast.list[3].dt_txt.substring(8, 10) + '/' + forecast.list[3].dt_txt.substring(5, 7) + '/' + forecast.list[3].dt_txt.substring(0, 4) + " " + forecast.list[3].dt_txt.substring(11, 13)
+
     }
     return(
         <div className='mt-5'>
@@ -45,8 +62,17 @@ const Card = ({showData, loadingData, weather, forecast}) => {
                                         <h5 className='card-test'>Sensacion termica: {(weather.main.feels_like - 273.15).toFixed(1)}°C</h5>
                                         <h5 className='card-test'>Humedad: {weather.main.humidity}%</h5>
                                         <h5 className='card-test'>Velocidad del viento: {weather.wind.speed}m/s</h5>
-
                                     </div>
+                                    <hr/>
+
+                                    <div className="row mt-4"> 
+                                        <div className="col">
+                                            <p>{forecastDate3}h</p>
+                                            <p className="description"><img src={iconUrl3} alt="icon"/>{forecast.list[1].weather[0].description}</p>
+                                            <p className="temp">{(forecast.list[1].main.temp - 273.15).toFixed(1)}°C</p>
+                                        </div>
+                                    </div>
+
                                 </div>
 
                             </div>
